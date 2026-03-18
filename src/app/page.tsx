@@ -6,6 +6,7 @@ import Programs from "@/components/Programs";
 import Gallery from "@/components/Gallery";
 import TrustSection from "@/components/TrustSection";
 import Team from "@/components/Team";
+import AdvisoryBoard from "@/components/AdvisoryBoard";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Gallery />
       <TrustSection />
       <Team />
+      <AdvisoryBoard />
       <Contact />
       <Footer />
     </main>

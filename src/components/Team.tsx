@@ -10,15 +10,15 @@ const teamMembers = [
     featured: true,
   },
   {
+    name: "Smt. Mala Venkatesh",
+    credentials: "B.E. Computer Science",
+    bio: "A seasoned software consultant who brings modern technology and organisational expertise to the foundation's outreach.",
+  },
+  {
     name: "Sri Srikantha Achar",
     role: "Vaikhanasa Agama Pandit",
     credentials: "M.A., Vaikhanasa Agama from TTD Vidya Peetha, Tirupathi",
     bio: "A scholar of Vedic tradition trained at the prestigious TTD Vidya Peetha. He ensures every ceremony upholds the authentic standards of the Vaikhanasa Agama.",
-  },
-  {
-    name: "Smt. Mala Venkatesh",
-    credentials: "B.E. Computer Science",
-    bio: "A seasoned software consultant who brings modern technology and organisational expertise to the foundation's outreach.",
   },
   {
     name: "Sri Sudhindra Kasi",

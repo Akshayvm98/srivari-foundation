@@ -72,6 +72,46 @@ const programs = [
       </svg>
     ),
   },
+  {
+    title: "Sri Srinivasa Pushpa Yaga",
+    subtitle: "The Sacred Floral Offering",
+    description:
+      "Pushpa Yaga is a sacred floral offering performed to Lord Srinivasa as an act of devotion and gratitude. The Lord is worshipped with a variety of fragrant flowers while Vedic hymns and sacred chants fill the air. The offering of flowers symbolises purity, surrender, and the devotee's heartfelt bhakti. This seva is believed to remove doshas, bring peace, and invoke divine blessings for all who participate.",
+    achievement: "Sacred Floral Seva",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <circle cx="20" cy="16" r="4" />
+        <ellipse cx="20" cy="10" rx="3" ry="5" />
+        <ellipse cx="14" cy="14" rx="3" ry="5" transform="rotate(-45 14 14)" />
+        <ellipse cx="26" cy="14" rx="3" ry="5" transform="rotate(45 26 14)" />
+        <ellipse cx="15" cy="20" rx="3" ry="5" transform="rotate(-90 15 20)" />
+        <ellipse cx="25" cy="20" rx="3" ry="5" transform="rotate(90 25 20)" />
+        <path d="M20 24 L20 36" />
+        <path d="M17 28 L20 25 L23 28" />
+        <path d="M16 32 L20 29 L24 32" />
+      </svg>
+    ),
+  },
+  {
+    title: "Sri Srinivasa Dolothsava",
+    subtitle: "The Divine Swing Festival",
+    description:
+      "Dolothsava is a serene and beautiful ritual where the Utsava Murthy of Lord Srinivasa is gently placed on a decorated swing and worshipped with devotional songs, Vedic chanting, and music. The rhythmic movement of the swing represents cosmic harmony and divine grace. This seva creates a deeply devotional atmosphere and offers devotees a chance to experience the Lord in a calm and intimate form.",
+    achievement: "Sacred Swing Seva",
+    icon: (
+      <svg viewBox="0 0 40 40" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1">
+        <path d="M10 4 L30 4" />
+        <path d="M12 4 L12 16" />
+        <path d="M28 4 L28 16" />
+        <path d="M10 16 L30 16 L30 26 L10 26 Z" />
+        <circle cx="20" cy="21" r="3" />
+        <path d="M17 21 L15 21" strokeDasharray="1 1" />
+        <path d="M25 21 L23 21" strokeDasharray="1 1" />
+        <path d="M14 30 Q20 36 26 30" strokeDasharray="2 2" />
+        <path d="M8 4 L8 2 L32 2 L32 4" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Programs() {
