@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   title: "Srivari Foundation — Dedicated to Dharma Prachara & Srinivasa Kalyana",
   description:
     "Srivari Foundation is a spiritual non-profit dedicated to Srinivasa Kalyana Mahothsavam, Dharma Prachara, Karnataka Haridasa Sahithya, and devotional outreach across India.",
+  icons: {
+    icon: "/srivari-logo.png",
+    apple: "/srivari-logo.png",
+  },
   keywords: [
     "Srivari Foundation",
     "Srinivasa Kalyana",

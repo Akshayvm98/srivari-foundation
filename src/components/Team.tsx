@@ -22,30 +22,20 @@ const teamMembers = [
     bio: "A seasoned software consultant who brings modern technology and organisational expertise to the foundation's outreach.",
   },
   {
-    name: "Sri Ha Ra Nagaraj",
-    role: "Dasa Sahithya Pracharak",
-    credentials: "President, Sri Haridasa Sangha",
-    bio: "A tireless promoter of Dasa Sahithya who has formed over 140 Bhajana Mandalis and published multiple books on Haridasa literature.",
-  },
-  {
     name: "Sri Sudhindra Kasi",
     role: "HR and Operations",
     credentials: "M.B.A., HR Manager at Dell India",
     bio: "Brings corporate HR expertise to volunteer management and organisational development.",
   },
-  { name: "Smt. Deepika Pandurangi" },
-  { name: "Sri M.R. Gopi Krishna" },
   { name: "Sri Srinivas Kashyap" },
   { name: "Sri Nanjunda Prasad" },
   { name: "Sri S. Ravi Prasad" },
-  { name: "Sri Raghavendra" },
-  { name: "Sri S.J. Suresh" },
 ];
 
 export default function Team() {
   const founder = teamMembers[0];
-  const coreTeam = teamMembers.slice(1, 5);
-  const extendedTeam = teamMembers.slice(5);
+  const coreTeam = teamMembers.slice(1, 4);
+  const extendedTeam = teamMembers.slice(4);
 
   return (
     <section id="team" className="py-24 sm:py-32 bg-cream-dark">
@@ -110,7 +100,7 @@ export default function Team() {
         </div>
 
         {/* Core Team */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid sm:grid-cols-3 gap-4 mb-6">
           {coreTeam.map((member) => (
             <div
               key={member.name}
