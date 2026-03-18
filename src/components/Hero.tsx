@@ -18,11 +18,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-sacred-dark/40 via-transparent to-burgundy-deep/90" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-36 sm:pt-28">
         {/* Sacred invocation */}
         <div className="mb-8">
           <p className="text-temple-gold/60 font-display text-lg sm:text-xl tracking-wider italic">
-            Sri Srinivasa Parabrahmane Namaha
+            Om Namo Venkatesaya
           </p>
         </div>
 
