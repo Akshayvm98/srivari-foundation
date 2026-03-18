@@ -1,9 +1,10 @@
+import Image from "next/image";
 import SacredDivider from "./SacredDivider";
 
 const advisors = [
-  { name: "Dr. Varaprasad Reddy" },
-  { name: "Dr. Mohan" },
-  { name: "Sri Appanachar" },
+  { name: "Dr. Varaprasad Reddy", image: "/varaprasad-reddy.jpg" },
+  { name: "Dr. Mohan", image: null },
+  { name: "Sri Appanachar", image: null },
 ];
 
 export default function AdvisoryBoard() {
@@ -37,11 +38,21 @@ export default function AdvisoryBoard() {
               {/* Top accent */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-temple-gold/40" />
 
-              {/* Avatar placeholder */}
-              <div className="w-20 h-20 rounded-full border-2 border-temple-gold/25 bg-gradient-to-br from-sandal-light/60 to-cream-dark flex items-center justify-center mx-auto mb-5">
-                <span className="text-burgundy text-xl font-display font-semibold">
-                  {advisor.name.split(" ").pop()?.[0]}
-                </span>
+              {/* Avatar */}
+              <div className="w-20 h-20 rounded-full border-2 border-temple-gold/25 overflow-hidden bg-gradient-to-br from-sandal-light/60 to-cream-dark flex items-center justify-center mx-auto mb-5">
+                {advisor.image ? (
+                  <Image
+                    src={advisor.image}
+                    alt={advisor.name}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-burgundy text-xl font-display font-semibold">
+                    {advisor.name.split(" ").pop()?.[0]}
+                  </span>
+                )}
               </div>
 
               <h4 className="font-display text-lg font-semibold text-sacred-text leading-tight">

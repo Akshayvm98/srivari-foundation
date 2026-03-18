@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <>
@@ -28,14 +30,21 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Ornamental top */}
+          {/* Logo */}
           <div className="flex items-center justify-center gap-4 mb-10">
             <div className="w-24 h-px bg-gradient-to-r from-transparent to-temple-gold/40" />
-            <svg viewBox="0 0 40 40" className="w-8 h-8 text-temple-gold/60 deepam-glow" fill="currentColor">
-              <path d="M20 4c2 8 10 10 16 8-6 8-12 14-16 16C16 26 10 20 4 12c6 2 14 0 16-8z" opacity="0.7" />
-              <path d="M20 10c1.5 6 6 8 12 7-4 5-8 9-12 11-4-2-8-6-12-11 6 1 10.5-1 12-7z" opacity="0.4" />
-              <ellipse cx="20" cy="32" rx="10" ry="3" opacity="0.25" />
-            </svg>
+            <div className="relative">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white p-1.5 border border-temple-gold/40">
+                <Image
+                  src="/srivari-logo.png"
+                  alt="Srivari Foundation"
+                  width={80}
+                  height={80}
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div className="absolute -inset-3 rounded-full bg-temple-gold/8 blur-xl -z-10" />
+            </div>
             <div className="w-24 h-px bg-gradient-to-l from-transparent to-temple-gold/40" />
           </div>
 
@@ -92,7 +101,7 @@ export default function Hero() {
         <div className="py-12 sm:py-16 px-4">
           <div className="grid grid-cols-3 gap-6 sm:gap-12 max-w-2xl mx-auto">
             {[
-              { number: "750+", label: "Kalyana Mahothsavams" },
+              { number: "700+", label: "Kalyana Mahothsavams" },
               { number: "25+", label: "Years of Dharma Prachara" },
               { number: "53L+", label: "Total Outreach" },
             ].map((stat) => (
