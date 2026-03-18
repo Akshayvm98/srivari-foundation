@@ -79,9 +79,8 @@ export default function Hero() {
         </div>
 
         {/* Scroll hint */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-          <span className="text-temple-gold/30 text-[10px] tracking-[0.3em] uppercase font-body">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-temple-gold/40 to-transparent" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <div className="w-px h-10 bg-gradient-to-b from-temple-gold/40 to-transparent" />
         </div>
       </section>
 
