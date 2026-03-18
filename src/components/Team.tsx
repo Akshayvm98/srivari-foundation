@@ -17,7 +17,6 @@ const teamMembers = [
   },
   {
     name: "Smt. Mala Venkatesh",
-    role: "Technology Advisor",
     credentials: "B.E. Computer Science",
     bio: "A seasoned software consultant who brings modern technology and organisational expertise to the foundation's outreach.",
   },
