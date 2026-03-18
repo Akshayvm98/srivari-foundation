@@ -1,26 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #FBF7F0;
+  --color-cream-dark: #F3EDE3;
+  --color-sandal: #E8DCC8;
+  --color-sandal-light: #F0E8D8;
+  --color-burgundy: #5C1A2A;
+  --color-burgundy-light: #7A2E42;
+  --color-burgundy-deep: #3D0F1A;
+  --color-temple-gold: #B8952F;
+  --color-temple-gold-light: #D4B04A;
+  --color-temple-gold-pale: #E8D48A;
+  --color-temple-gold-dark: #8A6F20;
+  --color-vermillion: #C44536;
+  --color-saffron: #CC7722;
+  --color-sacred-dark: #1A0A0E;
+  --color-sacred-brown: #3A2218;
+  --color-sacred-text: #2D1810;
+  --color-sacred-muted: #6B5B4F;
+  --color-sacred-light: #8B7D6B;
+
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-sacred-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ===== SACRED ORNAMENTAL ELEMENTS ===== */
+
+/* Lotus divider */
+.lotus-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.lotus-divider::before,
+.lotus-divider::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to var(--dir, right), transparent, var(--color-temple-gold));
+}
+
+.lotus-divider::after {
+  --dir: left;
+}
+
+/* Temple border pattern */
+.temple-border {
+  position: relative;
+}
+
+.temple-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 800px);
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--color-temple-gold) 15%,
+    var(--color-temple-gold-light) 30%,
+    var(--color-temple-gold) 50%,
+    var(--color-temple-gold-light) 70%,
+    var(--color-temple-gold) 85%,
+    transparent
+  );
+}
+
+/* Sacred pattern backgrounds */
+.sacred-pattern {
+  position: relative;
+}
+
+.sacred-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 25%, var(--color-temple-gold) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, var(--color-temple-gold) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Mandapam pillars effect */
+.mandapam-bg {
+  background:
+    linear-gradient(90deg, var(--color-temple-gold) 1px, transparent 1px) 0 0 / 200px 100%,
+    linear-gradient(90deg, transparent calc(100% - 1px), var(--color-temple-gold) calc(100% - 1px)) 0 0 / 200px 100%;
+  background-repeat: repeat-x;
+  opacity: 0.03;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Sacred gold text */
+.text-sacred-gold {
+  background: linear-gradient(135deg, var(--color-temple-gold-dark), var(--color-temple-gold), var(--color-temple-gold-light), var(--color-temple-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold shimmer border */
+@keyframes sacredShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.sacred-shimmer {
+  background: linear-gradient(90deg,
+    var(--color-temple-gold-dark),
+    var(--color-temple-gold-light),
+    var(--color-temple-gold-pale),
+    var(--color-temple-gold-light),
+    var(--color-temple-gold-dark)
+  );
+  background-size: 200% auto;
+  animation: sacredShimmer 6s ease-in-out infinite;
+}
+
+/* Ornamental corner motif (CSS-only) */
+.ornate-frame {
+  position: relative;
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: var(--color-temple-gold);
+  opacity: 0.4;
+}
+
+.ornate-frame::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.ornate-frame::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* Sacred glow effect */
+.sacred-glow {
+  box-shadow:
+    0 0 40px rgba(184, 149, 47, 0.08),
+    0 0 80px rgba(184, 149, 47, 0.04),
+    0 4px 20px rgba(92, 26, 42, 0.06);
+}
+
+/* Gentle hover lift */
+.sacred-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sacred-hover:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(184, 149, 47, 0.1),
+    0 4px 16px rgba(92, 26, 42, 0.08);
+}
+
+/* Section divider with lotus SVG */
+.section-lotus {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 C55 30 70 35 85 30 C75 45 65 55 50 60 C35 55 25 45 15 30 C30 35 45 30 50 10z' /%3E%3Cpath d='M50 25 C53 38 62 42 72 40 C66 48 58 54 50 57 C42 54 34 48 28 40 C38 42 47 38 50 25z' /%3E%3Cellipse cx='50' cy='70' rx='20' ry='8' /%3E%3Cellipse cx='50' cy='78' rx='26' ry='8' /%3E%3Cellipse cx='50' cy='86' rx='32' ry='8' /%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 C55 30 70 35 85 30 C75 45 65 55 50 60 C35 55 25 45 15 30 C30 35 45 30 50 10z' /%3E%3Cpath d='M50 25 C53 38 62 42 72 40 C66 48 58 54 50 57 C42 54 34 48 28 40 C38 42 47 38 50 25z' /%3E%3Cellipse cx='50' cy='70' rx='20' ry='8' /%3E%3Cellipse cx='50' cy='78' rx='26' ry='8' /%3E%3Cellipse cx='50' cy='86' rx='32' ry='8' /%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Fade in animation */
+@keyframes sacredFadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-sacred {
+  animation: sacredFadeIn 0.8s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--color-temple-gold); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-temple-gold-dark); }
+
+/* Deepam / lamp glow animation */
+@keyframes deepamGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.deepam-glow {
+  animation: deepamGlow 3s ease-in-out infinite;
 }
